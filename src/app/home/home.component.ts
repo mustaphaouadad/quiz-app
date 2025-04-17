@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  userName: string = '';
+  category: string = '22'; 
+  difficulty: string = 'easy';
   
 }

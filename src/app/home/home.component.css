@@ -1,0 +1,223 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to right, #034378, #2d4e68);
+}
+
+.row {
+  max-width: 900px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.wrapper {
+  background: #fff;
+  min-height: 540px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.example-1 .wrapper {
+  background: url('https://images.unsplash.com/photo-1496979551903-46e46589a88b') center/cover no-repeat;
+}
+
+.example-2 .wrapper {
+  background: url('https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg') center/cover no-repeat;
+}
+
+.date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #77d7b9;
+  color: white;
+  padding: 0.8em;
+  text-align: center;
+}
+
+.date span {
+  display: block;
+}
+
+.day {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.data {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  transform: translateY(70px);
+  transition: transform 0.3s ease;
+}
+
+.wrapper:hover .data {
+  transform: translateY(0);
+}
+
+.menu-content {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background: #77d7b9;
+  padding: 10px 0;
+}
+
+.menu-content li a {
+  color: white;
+  font-size: 20px;
+}
+
+.author {
+  font-size: 12px;
+}
+
+.title a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.menu-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.menu-button span,
+.menu-button span::before,
+.menu-button span::after {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #888;
+  border-radius: 50%;
+  content: '';
+  margin: 3px auto;
+  position: relative;
+}
+
+.menu-button span::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+}
+
+.menu-button span::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #034378;
+  color: white;
+  padding: 0.5em 1em;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #2d4e68;
+} */
+
+
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #034378, #2d4e68);
+  padding: 1rem;
+}
+
+.quiz-card {
+  background-color: #ffffffee;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.quiz-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #034378;
+}
+
+.quiz-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.actions .btn {
+  display: inline-block;
+  background-color: #034378;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.actions .btn:hover {
+  background-color: #2d4e68;
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.links a {
+  color: #034378;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
