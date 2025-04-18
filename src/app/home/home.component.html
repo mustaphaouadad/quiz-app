@@ -69,44 +69,56 @@
   Hello world!
 </h1> -->
 
-<div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-    <h1 class="text-2xl font-bold text-center text-[#07074D] mb-6">Démarrer un Quiz</h1>
+<div class="min-h-screen bg-gray-800 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+   
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+    </div>
 
-    <form>
-      <!-- Select catégorie -->
-      <div class="mb-4">
-        <label for="category" class="block mb-2 font-medium text-[#07074D]">Catégorie</label>
-        <select id="category" name="category"
-          class="w-full p-3 border rounded-md border-gray-300 text-[#6B7280] focus:outline-none focus:border-[#6A64F1]">
-          <option value="">-- Choisir une catégorie --</option>
-          <option value="9">Culture Générale</option>
-          <option value="18">Informatique</option>
-          <option value="23">Histoire</option>
-          <option value="21">Sport</option>
-          <!-- ممكن تضيف كاتيجوريات أخرى حسب API -->
-        </select>
+   
+    <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+      <div class="text-center pb-6">
+        <h1 class="text-3xl font-bold text-[#07074D]">Démarrer un Quiz</h1>
+        <p class="text-gray-500">Choisissez une catégorie et une difficulté pour commencer</p>
       </div>
 
-      <!-- Select difficulté -->
-      <div class="mb-4">
-        <label for="difficulty" class="block mb-2 font-medium text-[#07074D]">Difficulté</label>
-        <select id="difficulty" name="difficulty"
-          class="w-full p-3 border rounded-md border-gray-300 text-[#6B7280] focus:outline-none focus:border-[#6A64F1]">
-          <option value="">-- Choisir un niveau --</option>
-          <option value="easy">Facile</option>
-          <option value="medium">Moyen</option>
-          <option value="hard">Difficile</option>
-        </select>
-      </div>
+      <form (ngSubmit)="startQuiz()">
+        
+        <div class="mb-4">
+          <label for="category" class="block mb-2 font-medium text-[#07074D]">Catégorie</label>
+          <select  [(ngModel)]="category" id="category" name="category"
+            class="w-full p-3 border rounded-md border-gray-300 text-[#6B7280] focus:outline-none focus:border-[#6A64F1]">
+            <option value="">-- Choisir une catégorie --</option>
+            <option value="9">Culture Générale</option>
+            <option value="18">Informatique</option>
+            <option value="23">Histoire</option>
+            <option value="21">Sport</option>
+          </select>
+        </div>
 
-      <!-- Bouton Démarrer -->
-      <div class="mt-6">
-        <button type="submit"
-          class="w-full bg-[#6A64F1] text-white py-3 rounded-md hover:bg-[#574fd6] transition">Démarrer le Quiz</button>
-      </div>
-    </form>
+       
+        <div class="mb-4">
+          <label for="difficulty" class="block mb-2 font-medium text-[#07074D]">Difficulté</label>
+          <select [(ngModel)]="difficulty"  id="difficulty" name="difficulty"
+            class="w-full p-3 border rounded-md border-gray-300 text-[#6B7280] focus:outline-none focus:border-[#6A64F1]">
+            <option value="">-- Choisir un niveau --</option>
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+          </select>
+        </div>
+
+       
+        <div class="mt-6">
+          <button type="submit"
+            class="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 transition">Démarrer le
+            Quiz</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
+
 
 

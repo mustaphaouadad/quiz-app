@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-result',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './result.component.html',
-  styleUrl: './result.component.css'
+  styleUrls: ['./result.component.css']
 })
-export class ResultComponent {
+export class ResultComponent implements OnInit {
+  result: any;
 
+  ngOnInit(): void {
+    const storedResult = localStorage.getItem('lastResult');
+    if (storedResult) {
+      this.result = JSON.parse(storedResult);
+    }
+  }
 }
+

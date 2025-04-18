@@ -1,1 +1,31 @@
-<p>result works!</p>
+<div class="p-6 max-w-xl mx-auto text-center bg-white rounded shadow mt-10">
+  <h1 class="text-2xl font-bold text-indigo-700 mb-4">Votre Résultat</h1>
+
+  <div *ngIf="result; else noResult" class="space-y-3">
+    <p class="text-lg">
+      Date : <strong>{{ result.date | date:'medium' }}</strong>
+    </p>
+    <p class="text-lg">
+      Catégorie : <strong>{{ result.category }}</strong>
+    </p>
+    <p class="text-lg">
+      Difficulté : <strong>{{ result.difficulty }}</strong>
+    </p>
+    <p class="text-lg">
+      Réponses correctes : <strong>{{ result.score }} / {{ result.total }}</strong>
+    </p>
+    <p class="text-lg text-green-600 font-semibold">
+      Pourcentage : {{ result.percentage }}%
+    </p>
+  </div>
+
+  <ng-template #noResult>
+    <p class="text-gray-500">Aucun résultat à afficher.</p>
+  </ng-template>
+
+  <div class="mt-6">
+    <a routerLink="/home" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+      Recommencer
+    </a>
+  </div>
+</div>

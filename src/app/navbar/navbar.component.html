@@ -1,4 +1,4 @@
-<nav class="bg-gray-800 text-white">
+<nav class="bg-gradient-to-r from-indigo-700 to-purple-500 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       
@@ -26,12 +26,11 @@
     </div>
   </div>
 
-  <!-- Mobile Menu (if menuOpen is true) -->
-  <div *ngIf="menuOpen" class="md:hidden px-4 pb-4 space-y-2 bg-gray-700">
+  <!-- Mobile Menu -->
+  <div *ngIf="menuOpen" class="md:hidden px-4 pb-4 space-y-2 bg-gradient-to-r from-indigo-700 to-purple-500 text-white">
+
     <a routerLink="/" class="block hover:text-gray-300">Accueil</a>
     <a routerLink="/history" class="block hover:text-gray-300">Historique</a>
     <a routerLink="/settings" class="block hover:text-gray-300">Paramètres</a>
   </div>
 </nav>
-
-  
